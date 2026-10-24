@@ -1,0 +1,578 @@
+/* ==========================================================================
+   SE.KERTASFOTO — INDIE PHOTOBOOTH STUDIO DESIGN SYSTEM
+   Primary: #5e17eb (Electric Studio Violet)
+   Secondary: #9047ca (Orchid Violet)
+   Accent: #FFDE59 (Sunshine Yellow)
+   Aesthetic: Clean Neo-Brutalist, Modern, Vibrant, Cute & Uncluttered
+   ========================================================================== */
+
+:root {
+  /* Brand Core Colors requested by user */
+  --primary: #5e17eb;
+  --primary-hover: #4d0ecf;
+  --primary-light: #F4EFFF;
+  --primary-subtle: #FAF6FF;
+
+  --secondary: #9047ca;
+  --secondary-hover: #7b32b3;
+  --secondary-light: #F9F2FD;
+
+  /* Harmonious Supporting Accents */
+  --accent-yellow: #FFDE59;
+  --accent-yellow-light: #FFF8D4;
+  --accent-mint: #CBEAD2;
+  
+  /* Canvas & Ink */
+  --bg-canvas: #FAF8FE;
+  --bg-card: #FFFFFF;
+  --ink-dark: #160D29;
+  --ink-muted: #5F5675;
+  --ink-subtle: #968CA8;
+
+  /* Typography */
+  --font-serif: 'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-hand: 'Caveat', 'Nanum Pen Script', cursive, sans-serif;
+
+  /* Neo-Brutalist Outlines & Hard Shadows */
+  --border-thick: 2px solid #160D29;
+  --border-purple: 2px solid #5e17eb;
+  --shadow-neo: 4px 4px 0px #160D29;
+  --shadow-neo-lg: 6px 6px 0px #160D29;
+  --shadow-neo-purple: 4px 4px 0px #5e17eb;
+}
+
+/* Base Setup */
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-canvas);
+  color: var(--ink-dark);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--bg-canvas);
+  color: var(--ink-dark);
+}
+
+::selection {
+  background-color: #5e17eb;
+  color: #FFFFFF;
+}
+
+/* Notebook Graph Grid (Soft lavender/purple-tinted graph paper) */
+.bg-notebook-grid {
+  background-color: var(--bg-canvas);
+  background-image: 
+    linear-gradient(to right, rgba(94, 23, 235, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(94, 23, 235, 0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Typography Helpers */
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-hand {
+  font-family: var(--font-hand);
+}
+
+/* Neo-Brutalist Cards */
+.neo-box {
+  background: #FFFFFF;
+  border: var(--border-thick);
+  border-radius: 16px;
+  box-shadow: var(--shadow-neo-lg);
+  transition: transform 0.2s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.2s ease;
+}
+
+.neo-box:hover {
+  transform: translate(-2px, -3px);
+  box-shadow: 8px 8px 0px #160D29;
+}
+
+/* Primary Button in #5e17eb */
+.btn-neo-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--primary);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-neo);
+  transition: all 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn-neo-primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #160D29;
+  background-color: var(--primary-hover);
+}
+
+.btn-neo-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #160D29;
+}
+
+/* Secondary Button in clean white with dark outline */
+.btn-neo-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: var(--ink-dark);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-neo);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-neo-secondary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #160D29;
+  background-color: var(--primary-light);
+  color: var(--primary);
+}
+
+.btn-neo-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #160D29;
+}
+
+/* Yellow Sunshine Accent Button */
+.btn-neo-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: var(--accent-yellow);
+  color: var(--ink-dark);
+  font-family: var(--font-sans);
+  font-weight: 800;
+  font-size: 0.95rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 9999px;
+  border: var(--border-thick);
+  box-shadow: var(--shadow-neo);
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-neo-yellow:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #160D29;
+  background-color: #FFE67A;
+}
+
+.btn-neo-yellow:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #160D29;
+}
+
+/* Sticker Tag */
+.sticker-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.85rem;
+  background: #FFFFFF;
+  border: 1.5px solid #160D29;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #160D29;
+  box-shadow: 2px 2px 0px #160D29;
+  transition: transform 0.15s ease;
+  user-select: none;
+}
+
+.sticker-tag:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px #160D29;
+}
+
+.sticker-tag.purple {
+  background-color: var(--primary-light);
+  color: var(--primary);
+  border-color: var(--primary);
+  box-shadow: 2px 2px 0px var(--primary);
+}
+
+.sticker-tag.secondary {
+  background-color: var(--secondary-light);
+  color: var(--secondary);
+  border-color: var(--secondary);
+  box-shadow: 2px 2px 0px var(--secondary);
+}
+
+.sticker-tag.yellow {
+  background-color: var(--accent-yellow);
+  color: var(--ink-dark);
+}
+
+/* Washi Tape Accent */
+.washi-tape {
+  position: absolute;
+  height: 26px;
+  width: 90px;
+  background: rgba(255, 222, 89, 0.9);
+  border-top: 1px dashed rgba(22, 13, 41, 0.25);
+  border-bottom: 1px dashed rgba(22, 13, 41, 0.25);
+  box-shadow: 0 2px 4px rgba(22, 13, 41, 0.1);
+  z-index: 30;
+  pointer-events: none;
+  clip-path: polygon(
+    0% 0%, 4% 30%, 0% 70%, 3% 100%,
+    97% 100%, 100% 70%, 96% 30%, 99% 0%
+  );
+}
+
+.washi-tape.purple {
+  background: rgba(144, 71, 202, 0.8);
+}
+
+/* Photo Strip in Hero & Gallery */
+.photostrip-neo {
+  background: #FFFFFF;
+  border: var(--border-thick);
+  border-radius: 12px;
+  box-shadow: var(--shadow-neo-lg);
+  padding: 12px 10px 16px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.photostrip-neo.theme-cream {
+  background-color: #FFFDF9;
+}
+
+.photostrip-neo.theme-purple {
+  background-color: #F4EFFF;
+  border-color: #5e17eb;
+}
+
+.photostrip-neo.theme-yellow {
+  background-color: #FFF9D9;
+}
+
+.photostrip-neo.theme-noir {
+  background-color: #160D29;
+  color: #FFFFFF;
+}
+
+.photostrip-neo.theme-noir .photostrip-text {
+  color: #FFFFFF;
+}
+
+.photostrip-frame {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1.5px solid #160D29;
+}
+
+/* Signature Parallax Feature */
+.parallax-section {
+  position: relative;
+  overflow: hidden;
+  height: 520px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #160D29;
+  border-top: var(--border-thick);
+  border-bottom: var(--border-thick);
+}
+
+.parallax-img-wrapper {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  width: 100%;
+  height: 140%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.parallax-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  will-change: transform;
+  transform: translate3d(0, var(--parallax-offset, 0px), 0) scale(1.05);
+}
+
+.parallax-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(22, 13, 41, 0.65) 0%,
+    rgba(22, 13, 41, 0.82) 50%,
+    rgba(22, 13, 41, 0.92) 100%
+  );
+}
+
+/* Camera Flash Screen Overlay */
+#cameraFlashOverlay {
+  position: fixed;
+  inset: 0;
+  background-color: #FFFFFF;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+}
+
+#cameraFlashOverlay.flash-active {
+  opacity: 0.95;
+  transition: none;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(22, 13, 41, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Gallery Photo Frame (Rasio 2:3 Alami Cetakan Photobooth) */
+.gallery-photo-wrapper {
+  aspect-ratio: 2 / 3;
+  width: 100%;
+}
+
+.gallery-photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-img {
+  max-height: 82vh;
+  max-width: 90vw;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border: var(--border-thick);
+  border-radius: 8px;
+  box-shadow: 8px 8px 0px var(--primary);
+}
+
+/* Neo-Brutalist Accordion */
+.accordion-neo {
+  background: #FFFFFF;
+  border: var(--border-thick);
+  border-radius: 14px;
+  box-shadow: 3px 3px 0px #160D29;
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.accordion-neo:hover {
+  box-shadow: 5px 5px 0px #160D29;
+  transform: translate(-1px, -1px);
+}
+
+.accordion-header {
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ink-dark);
+}
+
+.accordion-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #160D29;
+  background: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-left: 1rem;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease;
+}
+
+.accordion-neo.active .accordion-icon {
+  transform: rotate(45deg);
+  background-color: var(--primary);
+  color: #FFFFFF;
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s ease, visibility 0.35s ease;
+}
+
+.accordion-neo.active .accordion-content {
+  opacity: 1;
+  visibility: visible;
+}
+
+.accordion-inner {
+  padding: 0.25rem 1.5rem 1.35rem 1.5rem;
+  color: var(--ink-muted);
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+/* Package Pass (Ticket Style) */
+.package-pass {
+  background: #FFFFFF;
+  border: var(--border-thick);
+  border-radius: 16px;
+  box-shadow: var(--shadow-neo-lg);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.package-pass.featured {
+  border-width: 2.5px;
+  border-color: #160D29;
+  background: var(--primary);
+  color: #FFFFFF;
+  box-shadow: 8px 8px 0px #160D29;
+}
+
+.package-pass.featured:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 10px 10px 0px #160D29;
+}
+
+.package-pass.featured h3 {
+  color: #FFFFFF;
+}
+
+.package-pass.featured p {
+  color: #E6DCFF;
+}
+
+.package-pass.featured li {
+  color: #FFFFFF;
+}
+
+.package-pass.featured li span:first-child {
+  color: var(--accent-yellow);
+}
+
+/* Vibrant Purple CTA Banner */
+.cta-banner-purple {
+  background: var(--primary);
+  border: var(--border-thick);
+  border-radius: 24px;
+  box-shadow: 8px 8px 0px #160D29;
+  color: #FFFFFF;
+}
+
+/* Dev Toast */
+.dev-toast {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 99;
+  background: #FFFFFF;
+  color: var(--ink-dark);
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  box-shadow: 5px 5px 0px #160D29;
+  border: var(--border-thick);
+  font-size: 0.88rem;
+  max-width: 360px;
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  transform: translateY(120%);
+  opacity: 0;
+  transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.dev-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Responsive & Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .parallax-img {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .parallax-section {
+    height: 420px;
+  }
+  .parallax-img-wrapper {
+    top: 0;
+    height: 100%;
+  }
+  .parallax-img {
+    transform: none !important;
+  }
+}
